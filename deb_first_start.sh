@@ -51,6 +51,8 @@ echo " ..."
 sudo apt autoremove -y
 echo "************************************************************"
 #
+# ------------------------------------------------------------------------------------------
+#
 echo "************************************************************"
 echo "*** Installiere Flatpak ... ********************************"
 echo "************************************************************"
@@ -183,6 +185,52 @@ echo "*** installiere KeePassXC ... ******************************"
 echo "************************************************************"
 sudo apt install keepassxc -y
 echo "************************************************************"
+#
+# ------------------------------------------------------------------------------------------
+#
+echo "************************************************************"
+echo "    klone Hintergrundbilder von GitHub ..."
+echo " ..."
+sudo git clone https://github.com/Michellesdreamplace/DEB_Wallpaper.git $HOMEVERZEICHNIS/Downloads/MDP_DEB_Wallpaper/
+echo "************************************************************"
+echo "    entpacke Hintergrundbilder in globalen Freigabeordner ..."
+echo " ..."
+sudo tar -xzf $HOMEVERZEICHNIS/Downloads/MDP_DEB_Wallpaper/MDP_Wallpaper.tar.gz -C /usr/share/images/desktop-base/
+echo "************************************************************"
+echo "    aufräumen ..."
+echo " ..."
+sudo rm -r $HOMEVERZEICHNIS/Downloads/MDP_DEB_Wallpaper
+echo "************************************************************"
+#
+echo "************************************************************"
+echo "    klone Icon-Themes von GitHub ..."
+echo " ..."
+sudo git clone https://github.com/Michellesdreamplace/DEB_Icon_Theme.git $HOMEVERZEICHNIS/Downloads/MDP_DEB_Icon_Theme/
+echo "************************************************************"
+echo "    entpacke Icon-Themes in globalen Freigabeordner ..."
+echo " ..."
+sudo tar -xzf $HOMEVERZEICHNIS/Downloads/MDP_DEB_Icon_Theme/Icon_Theme.tar.gz -C /usr/share/icons/
+echo "************************************************************"
+echo "    aufräumen ..."
+echo " ..."
+sudo rm -r $HOMEVERZEICHNIS/Downloads/MDP_DEB_Icon_Theme
+echo "************************************************************"
+#
+echo "************************************************************"
+echo "    klone Schriftarten von GitHub ..."
+echo " ..."
+sudo git clone https://github.com/Michellesdreamplace/DEB_Fonts.git $HOMEVERZEICHNIS/Downloads/MDP_DEB_Fonts/
+echo "************************************************************"
+echo "    entpacke Schriftarten in globalen Freigabeordner ..."
+echo " ..."
+sudo tar -xzf $HOMEVERZEICHNIS/Downloads/MDP_DEB_Fonts/MDP_Fonts.tar.gz -C /usr/share/fonts/
+echo "************************************************************"
+echo "    aufräumen ..."
+echo " ..."
+sudo rm -r $HOMEVERZEICHNIS/Downloads/MDP_DEB_Fonts
+echo "************************************************************"
+#
+# ------------------------------------------------------------------------------------------
 #
 neofetch
 echo "************************************************************"
