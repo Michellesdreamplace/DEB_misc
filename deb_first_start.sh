@@ -121,11 +121,23 @@ sudo gtk-update-icon-cache /usr/share/icons/Papirus/
 sudo gtk-update-icon-cache /usr/share/icons/Papirus-Dark/
 sudo gtk-update-icon-cache /usr/share/icons/Papirus-Light/
 echo "************************************************************"
+echo "*** installiere greybird-gtk-theme *************************"
+echo "************************************************************"
+sudo apt install greybird-gtk-theme -y
+echo "************************************************************"
+echo "*** installiere elementary-xfce-icon-theme *****************"
+echo "************************************************************"
+sudo apt install elementary-xfce-icon-theme -y
+echo "************************************************************"
+echo "*** installiere breeze-cursor-theme ************************"
+echo "************************************************************"
+sudo apt install breeze-cursor-theme -y
+echo "************************************************************"
 echo "*** installiere Microsoft Schriftarten für Kompatibilität **"
 echo "************************************************************"
 sudo apt install ttf-mscorefonts-installer -y
 echo "************************************************************"
-echo "*** installiere tar ... ****************************"
+echo "*** installiere tar ... ************************************"
 echo "************************************************************"
 sudo apt install tar -y
 echo "************************************************************"
