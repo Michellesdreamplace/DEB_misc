@@ -11,9 +11,9 @@ NORMAL='\033[0;39m'
 BENUTZER=$USER
 HOMEVERZEICHNIS=$HOME
 MYSHELL=$SHELL
-echo "Hallo $BENUTZER"
-echo "Dein Home-Verzeichnis: $HOMEVERZEICHNIS"
-echo "Deine Shell: $MYSHELL"
+echo "$CYAN Hallo $BENUTZER"
+echo "$CYAN Dein Home-Verzeichnis: $HOMEVERZEICHNIS"
+echo "$CYAN Deine Shell: $MYSHELL"
 echo "$GREEN ************************************************************"
 echo "$GREEN     lese Paketdatenbank (Repository-Index) neu ein"
 echo "$GREEN  ...$NORMAL "
