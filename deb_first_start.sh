@@ -200,13 +200,13 @@ sudo apt install keepassxc -y
 echo "$GREEN ************************************************************"
 echo "*** installiere Visual Studio Code ... *********************"
 echo "************************************************************ $NORMAL"
-echo "installiere Paketabhängigkeiten für den ordnungsgemäßen Betrieb von vscode..."
+echo "$GREEN installiere Paketabhängigkeiten für den ordnungsgemäßen Betrieb von vscode... $NORMAL"
 sudo apt install software-properties-common apt-transport-https wget -y
-echo "importiere GPG-Schlüssel von Microsoft, um die Paketintegrität zu überprüfen..."
+echo "$GREEN importiere GPG-Schlüssel von Microsoft, um die Paketintegrität zu überprüfen... $NORMAL"
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-echo "füge das Visual Studio Code-Repository hinzu..."
-sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-echo "installiere VSCode..."
+echo "$GREEN füge das Visual Studio Code-Repository hinzu... $NORMAL"
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main -y $NORMAL"
+echo "$GREEN installiere VSCode..."
 sudo apt install code -y
 #
 # ------------------------------------------------------------------------------------------
@@ -266,6 +266,11 @@ echo "$CYAN +++++                                                  +++++"
 echo "$CYAN +++++               FLATPAKs installieren              +++++"
 echo "$CYAN +++++                                                  +++++"
 echo "$CYAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ $NORMAL"
+#
+echo "$GREEN *** installiere Flatseal ... ***********************"
+echo "************************************************************ $NORMAL"
+sudo flatpak install flathub com.github.tchx84.Flatseal -y
+echo "$GREEN ************************************************************ $NORMAL"
 #
 # ---------- WIP ----------
 #
