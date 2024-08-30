@@ -1,11 +1,17 @@
 #!/bin/bash
+
+NORMAL='3[0;39m'
+BLUE='3[1;34m'
+GREEN='3[1;32m'
+RED='3[1;31m'
+
 BENUTZER=$USER
 HOMEVERZEICHNIS=$HOME
 MYSHELL=$SHELL
 echo "Hallo $BENUTZER"
 echo "Dein Home-Verzeichnis: $HOMEVERZEICHNIS"
 echo "Deine Shell: $MYSHELL"
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 echo "    lese Paketdatenbank (Repository-Index) neu ein"
 echo " ..."
 sudo apt update
