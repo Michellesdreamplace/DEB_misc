@@ -83,11 +83,11 @@ sudo apt install lightdm-settings -y
 echo "************************************************************"
 echo "*** installiere allgemeine Softwareeigenschaften (GRUB) ****"
 echo "************************************************************"
-sudo apt install software-properties-common
+sudo apt install software-properties-common -y
 echo "************************************************************"
 echo "*** füge das Grub Customizer PPA hinzu *********************"
 echo "************************************************************"
-sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
 echo "************************************************************"
 echo "*** lese Paketdatenbank (Repository-Index) neu ein *********"
 echo "************************************************************"
@@ -95,7 +95,7 @@ sudo apt update
 echo "************************************************************"
 echo "*** installiere GRUB-Customizer ... ************************"
 echo "************************************************************"
-sudo apt install grub-customizer
+sudo apt install grub-customizer -y
 echo "************************************************************"
 echo "*** installiere Netfilter-FIREWALL & GUI ... ***************"
 echo "************************************************************"
@@ -250,7 +250,12 @@ echo "+++++               FLATPAKs installieren              +++++"
 echo "+++++                                                  +++++"
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 #
+# ---------- WIP ----------
+#
+echo "************************************************************"
+echo "    Fertig ..."
+echo "************************************************************"
 neofetch
 echo "************************************************************"
-echo "    Fertig ... Viel Spaß mit deinem System :)"
+echo "    Viel Spaß mit deinem System :)"
 echo "************************************************************"
