@@ -19,7 +19,7 @@ echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 #
 sudo apt purge gnome-2048 -y
 echo "************************************************************"
-#sudo apt purge sol -y
+sudo apt purge sol -y
 echo "************************************************************"
 sudo apt purge five-or-more -y
 echo "************************************************************"
@@ -56,8 +56,39 @@ echo "************************************************************"
 sudo apt purge four-in-a-row -y
 echo "************************************************************"
 #
+echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+echo "+++++                                                  +++++"
+echo "+++++               bereinige ...                      +++++"
+echo "+++++                                                  +++++"
+echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo "************************************************************"
-echo "    Fertig ..."
-echo " "
-echo "    Viel Spaß mit ohne Games :)"
+echo "    lese Paketdatenbank (Repository-Index) neu ein"
+echo " ..."
+sudo apt update
 echo "************************************************************"
+echo "    lösche bereits heruntergeladenen Installationsdateien ..."
+echo "    aus dem Paket-Cache /var/cache/apt/archives/ "
+echo "    und gebe so Festplattenspeicher frei ..."
+echo " ..."
+sudo apt clean -y
+echo "************************************************************"
+echo "    lösche alle heruntergeladenen Paketinstallationsdateien,"
+echo "    die aktuell nicht mehr in den Quellen verfügbar sind ..."
+echo " ..."
+sudo apt autoclean -y
+echo "************************************************************"
+echo "    bereinige System von nutzlosen Paketen ..."
+echo "    deinstalliere alle automatisch installierten Pakete,"
+echo "    die keine Abhängigkeiten mehr zu anderen Paketen haben"
+echo "    und deshalb nicht mehr benötigt werden ..."
+echo " ..."
+sudo apt autoremove -y
+echo "************************************************************"
+#
+echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+echo "+++++                                                  +++++"
+echo "+++++          Fertig ...                              +++++"
+echo "+++++                                                  +++++"
+echo "+++++          Viel Spaß mit ohne Games :)             +++++"
+echo "+++++                                                  +++++"
+echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
