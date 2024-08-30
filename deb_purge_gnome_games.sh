@@ -1,9 +1,11 @@
 #!/bin/bash
 
-NORMAL='3[0;39m'
-BLUE='3[1;34m'
-GREEN='3[1;32m'
-RED='3[1;31m'
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+NORMAL='\033[0;39m'
 
 BENUTZER=$USER
 HOMEVERZEICHNIS=$HOME
@@ -12,91 +14,93 @@ echo "Hallo $BENUTZER"
 echo "Dein Home-Verzeichnis: $HOMEVERZEICHNIS"
 echo "Deine Shell: $MYSHELL"
 echo "$GREEN ************************************************************"
-echo "    lese Paketdatenbank (Repository-Index) neu ein"
-echo " ..."
+echo "$GREEN     lese Paketdatenbank (Repository-Index) neu ein"
+echo "$GREEN  ..."
 sudo apt update
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 #
-echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-echo "+++++                                                  +++++"
-echo "+++++        bereinige System von Gnome-Spielen        +++++"
-echo "+++++                                                  +++++"
-echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+echo "$CYAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+echo "$CYAN +++++                                                  +++++"
+echo "$CYAN +++++        bereinige System von Gnome-Spielen        +++++"
+echo "$CYAN +++++                                                  +++++"
+echo "$CYAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 #
+echo "$GREEN ************************************************************"
 sudo apt purge gnome-2048 -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 sudo apt purge aisleriot -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 sudo apt purge sol -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 sudo apt purge five-or-more -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 sudo apt purge hitori -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 sudo apt purge gnome-klotski -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 sudo apt purge lightsoff -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 sudo apt purge gnome-mahjongg -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 sudo apt purge gnome-mines -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 sudo apt purge gnome-nibbles -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 sudo apt purge quadrapassel -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 sudo apt purge iagno -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 sudo apt purge gnome-robots -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 sudo apt purge gnome-chess -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 sudo apt purge gnome-sudoku -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 sudo apt purge swell-foop -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 sudo apt purge tali -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 sudo apt purge gnome-taquin -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 sudo apt purge gnome-tetravex -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 sudo apt purge four-in-a-row -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 #
-echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-echo "+++++                                                  +++++"
-echo "+++++               bereinige ...                      +++++"
-echo "+++++                                                  +++++"
-echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-echo "************************************************************"
-echo "    lese Paketdatenbank (Repository-Index) neu ein"
-echo " ..."
+echo "$CYAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+echo "$CYAN +++++                                                  +++++"
+echo "$CYAN +++++               bereinige ...                      +++++"
+echo "$CYAN +++++                                                  +++++"
+echo "$CYAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+echo "$GREEN ************************************************************"
+echo "$GREEN     lese Paketdatenbank (Repository-Index) neu ein"
+echo "$GREEN  ..."
 sudo apt update
-echo "************************************************************"
-echo "    lösche bereits heruntergeladenen Installationsdateien ..."
-echo "    aus dem Paket-Cache /var/cache/apt/archives/ "
-echo "    und gebe so Festplattenspeicher frei ..."
-echo " ..."
+echo "$GREEN ************************************************************"
+echo "$GREEN     lösche bereits heruntergeladenen Installationsdateien ..."
+echo "$GREEN     aus dem Paket-Cache /var/cache/apt/archives/ "
+echo "$GREEN     und gebe so Festplattenspeicher frei ..."
+echo "$GREEN  ..."
 sudo apt clean -y
-echo "************************************************************"
-echo "    lösche alle heruntergeladenen Paketinstallationsdateien,"
-echo "    die aktuell nicht mehr in den Quellen verfügbar sind ..."
-echo " ..."
+echo "$GREEN ************************************************************"
+echo "$GREEN     lösche alle heruntergeladenen Paketinstallationsdateien,"
+echo "$GREEN     die aktuell nicht mehr in den Quellen verfügbar sind ..."
+echo "$GREEN  ..."
 sudo apt autoclean -y
-echo "************************************************************"
-echo "    bereinige System von nutzlosen Paketen ..."
-echo "    deinstalliere alle automatisch installierten Pakete,"
-echo "    die keine Abhängigkeiten mehr zu anderen Paketen haben"
-echo "    und deshalb nicht mehr benötigt werden ..."
-echo " ..."
+echo "$GREEN ************************************************************"
+echo "$GREEN     bereinige System von nutzlosen Paketen ..."
+echo "$GREEN     deinstalliere alle automatisch installierten Pakete,"
+echo "$GREEN     die keine Abhängigkeiten mehr zu anderen Paketen haben"
+echo "$GREEN     und deshalb nicht mehr benötigt werden ..."
+echo "$GREEN  ..."
 sudo apt autoremove -y
-echo "************************************************************"
+echo "$GREEN ************************************************************"
 #
-echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-echo "+++++                                                  +++++"
-echo "+++++          Fertig ...                              +++++"
-echo "+++++                                                  +++++"
-echo "+++++          Viel Spaß mit ohne Games :)             +++++"
-echo "+++++                                                  +++++"
-echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+echo "$CYAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+echo "$CYAN +++++                                                  +++++"
+echo "$CYAN +++++          Fertig ...                              +++++"
+echo "$CYAN +++++                                                  +++++"
+echo "$CYAN +++++          Viel Spaß mit ohne Games :)             +++++"
+echo "$CYAN +++++                                                  +++++"
+echo "$CYAN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+echo "$NORMAL"
