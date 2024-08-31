@@ -141,6 +141,7 @@ echo "*** installiere Netfilter-FIREWALL & GUI ... ***************"
 echo "************************************************************ $NORMAL"
 sudo apt install ufw -y
 sudo apt install gufw -y
+echo "$CYAN"
 sudo ufw enable
 echo "$GREEN ************************************************************"
 echo "*** installiere git ... *******************************"
