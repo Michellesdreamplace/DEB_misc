@@ -143,6 +143,7 @@ sudo apt install ufw -y
 sudo apt install gufw -y
 echo "$CYAN"
 sudo ufw enable
+echo "$NORMAL"
 echo "$GREEN ************************************************************"
 echo "*** installiere git ... *******************************"
 echo "************************************************************ $NORMAL"
