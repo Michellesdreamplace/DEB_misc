@@ -207,7 +207,8 @@ sudo apt install software-properties-common apt-transport-https wget -y
 echo "$GREEN importiere GPG-Schlüssel von Microsoft, um die Paketintegrität zu überprüfen... $NORMAL"
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 echo "$GREEN füge das Visual Studio Code-Repository hinzu... $NORMAL"
-sudo add-apt-repository -r "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo add-apt-repository -r -y "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+#---------- WIP ----------
 sudo add-apt-repository -y "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 echo "$GREEN installiere VSCode... $NORMAL"
 sudo apt install code -y
