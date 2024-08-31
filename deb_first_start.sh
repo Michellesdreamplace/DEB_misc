@@ -1,4 +1,8 @@
 #!/bin/bash
+#----------------------------------------
+# für Repositories:
+DEBVERSION='bookworm'
+#----------------------------------------
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
@@ -57,6 +61,23 @@ echo "    und deshalb nicht mehr benötigt werden ..."
 echo " ... $NORMAL"
 sudo apt autoremove -y
 echo "$GREEN ************************************************************"
+#
+# ------------------------------------------------------------------------------------------
+#
+echo "$CYAN "
+echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+echo "+++++                                                  +++++"
+echo "+++++        Multimedia Repositories hinzufügen        +++++"
+echo "+++++                                                  +++++"
+echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+echo "$NORMAL "
+sudo apt install -y wget apt-transport-https
+sudo wget -O /usr/share/keyrings/deb-multimedia-keyring_2016.8.1_all.deb https://www.deb-multimedia.org/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2016.8.1_all.deb
+sudo dpkg -i deb-multimedia-keyring_2016.8.1_all.deb
+#echo "## Multimedia Repo" | sudo tee -a /etc/apt/sources.list.d/deb-multimedia.list
+echo "deb [signed-by=/usr/share/keyrings/deb-multimedia-keyring_2016.8.1_all.deb] https://www.deb-multimedia.org bookworm main non-free" | sudo tee /etc/apt/sources.list.d/deb-multimedia.list
+sudo dpkg -i deb-multimedia-keyring_2016.8.1_all.deb
+apt-get update
 #
 # ------------------------------------------------------------------------------------------
 #
