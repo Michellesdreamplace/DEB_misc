@@ -109,6 +109,10 @@ echo "*** Aktualisiere Flatpak ... *******************************"
 echo "************************************************************ $NORMAL"
 sudo flatpak update -y
 echo "$GREEN ************************************************************"
+echo "*** installiere Tasksel  (für Auswahl anderer DE's ... *****"
+echo "************************************************************ $NORMAL"
+sudo apt install tasksel -y
+echo "$GREEN ************************************************************"
 echo "*** installiere Anmeldefenster <LightDM>  ... **************"
 echo "************************************************************ $NORMAL"
 sudo apt install lightdm-settings -y
