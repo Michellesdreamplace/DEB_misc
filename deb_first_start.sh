@@ -231,6 +231,10 @@ echo "*** installiere KeePassXC ... ******************************"
 echo "************************************************************ $NORMAL"
 sudo apt install keepassxc -y
 echo "$GREEN ************************************************************"
+echo "*** installiere gimp ... ***********************************"
+echo "************************************************************ $NORMAL"
+sudo apt install gimp -y
+echo "$GREEN ************************************************************"
 echo "*** installiere Visual Studio Code ... *********************"
 echo "************************************************************ $NORMAL"
 echo "$GREEN installiere Paketabhängigkeiten für den ordnungsgemäßen Betrieb von vscode... $NORMAL"
