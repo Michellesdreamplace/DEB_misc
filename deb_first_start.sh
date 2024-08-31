@@ -129,6 +129,10 @@ echo "*** installiere GRUB-Customizer ... ************************"
 echo "************************************************************ $NORMAL"
 sudo apt install grub-customizer -y
 echo "$GREEN ************************************************************"
+echo "*** installiere Timeshift ... ******************************"
+echo "************************************************************ $NORMAL"
+sudo apt install timeshift -y
+echo "$GREEN ************************************************************"
 echo "*** installiere Netfilter-FIREWALL & GUI ... ***************"
 echo "************************************************************ $NORMAL"
 sudo apt install ufw -y
