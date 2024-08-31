@@ -71,13 +71,12 @@ echo "+++++        Multimedia Repositories hinzufügen        +++++"
 echo "+++++                                                  +++++"
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo "$NORMAL "
+echo "## Multimedia Repo" | sudo tee /etc/apt/sources.list.d/deb-multimedia.list
+echo "deb https://www.deb-multimedia.org bookworm main non-free" | sudo tee -a /etc/apt/sources.list.d/deb-multimedia.list
 sudo apt install -y wget apt-transport-https
-sudo wget -O /usr/share/keyrings/deb-multimedia-keyring_2016.8.1_all.deb https://www.deb-multimedia.org/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2016.8.1_all.deb
+wget https://www.deb-multimedia.org/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2016.8.1_all.deb
 sudo dpkg -i deb-multimedia-keyring_2016.8.1_all.deb
-#echo "## Multimedia Repo" | sudo tee -a /etc/apt/sources.list.d/deb-multimedia.list
-echo "deb [signed-by=/usr/share/keyrings/deb-multimedia-keyring_2016.8.1_all.deb] https://www.deb-multimedia.org bookworm main non-free" | sudo tee /etc/apt/sources.list.d/deb-multimedia.list
-sudo dpkg -i deb-multimedia-keyring_2016.8.1_all.deb
-apt-get update
+sudo apt update -y
 #
 # ------------------------------------------------------------------------------------------
 #
