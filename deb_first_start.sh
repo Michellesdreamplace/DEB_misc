@@ -2,6 +2,7 @@
 #----------------------------------------
 # für Repositories:
 DEBVERSION='bookworm'
+DEBMULTIMEDIA='deb https://www.deb-multimedia.org bookworm main non-free'
 #----------------------------------------
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -68,15 +69,17 @@ echo "$CYAN "
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo "+++++                                                  +++++"
 echo "+++++        Multimedia Repositories hinzufügen        +++++"
+echo "+++++         und aktuallisieren                       +++++"
 echo "+++++                                                  +++++"
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo "$NORMAL "
 echo "## Multimedia Repo" | sudo tee /etc/apt/sources.list.d/deb-multimedia.list
-echo "deb https://www.deb-multimedia.org bookworm main non-free" | sudo tee -a /etc/apt/sources.list.d/deb-multimedia.list
+echo "$DEBMULTIMEDIA" | sudo tee -a /etc/apt/sources.list.d/deb-multimedia.list
 sudo apt install -y wget apt-transport-https
 wget https://www.deb-multimedia.org/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2016.8.1_all.deb
 sudo dpkg -i deb-multimedia-keyring_2016.8.1_all.deb
 sudo apt update -y
+sudo apt upgrade -y
 #
 # ------------------------------------------------------------------------------------------
 #
