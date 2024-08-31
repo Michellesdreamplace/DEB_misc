@@ -314,9 +314,21 @@ echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo "$NORMAL "
 #
 echo "$GREEN ************************************************************"
-echo "*** installiere Flatseal ... ***********************"
+echo "*** installiere Flatseal ... *******************************"
 echo "************************************************************ $NORMAL"
 sudo flatpak install flathub com.github.tchx84.Flatseal -y
+echo "$GREEN ************************************************************"
+echo "*** installiere Extension Manager ... **********************"
+echo "************************************************************ $NORMAL"
+sudo flatpak install flathub com.mattjakeman.ExtensionManager -y
+echo "$GREEN ************************************************************"
+echo "*** installiere Discord ... ********************************"
+echo "************************************************************ $NORMAL"
+sudo flatpak install flathub com.discordapp.Discord -y
+echo "$GREEN ************************************************************"
+echo "*** installiere ONLYOFFICE ... *****************************"
+echo "************************************************************ $NORMAL"
+sudo flatpak install flathub org.onlyoffice.desktopeditors -y
 echo "$GREEN ************************************************************ $NORMAL"
 #
 # ---------- WIP ----------
@@ -328,4 +340,5 @@ echo "$NORMAL"
 screenfetch
 echo "$CYAN ************************************************************"
 echo "     Viel Spaß mit deinem System :)"
-echo "************************************************************ $NORMAL"
+echo "$BLUE      (PS: mit 'tasksel' kannst du dein DE erweitern oder ändern)"
+echo "$CYAN ************************************************************ $NORMAL"
