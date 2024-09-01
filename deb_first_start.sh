@@ -115,6 +115,8 @@ sudo apt install tasksel -y
 echo "$GREEN ************************************************************"
 echo "*** installiere Anmeldefenster <LightDM>  ... **************"
 echo "************************************************************ $NORMAL"
+sudo apt install lightdm -y
+sudo apt install lightdm-gtk-greeter -y
 sudo apt install lightdm-settings -y
 echo "$GREEN ************************************************************"
 echo "*** installiere allgemeine Softwareeigenschaften (GRUB) ****"
