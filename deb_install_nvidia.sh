@@ -40,14 +40,17 @@ echo "+++++                                                  +++++"
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo "$NORMAL "
 #
-aaa="xxx"
-if [[ $NVDETECT -eq "No NVIDIA GPU detected." ]]; then
-   echo "no"
-elif [[ $NVDETECT -eq "test" ]]; then
-   echo "teat"
+
+
+aaa="$1"
+if [ "$NVDETECT" = "No NVIDIA GPU detected." ]; then
+        echo "no"
+elif [ "$NVDETECT" = "test" ]; then
+        echo "test"
 else
-   echo "something else"
+        echo "something else"
 fi
+
 
 #---------- WIP ----------
 
