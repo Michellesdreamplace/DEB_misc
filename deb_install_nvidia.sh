@@ -40,23 +40,17 @@ echo "+++++                                                  +++++"
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo "$NORMAL "
 #
-
-
-aaa="$1"
+#---------- WIP ----------
+#
 if [ "$NVDETECT" = "No NVIDIA GPU detected." ]; then
-        echo "no"
+        echo "$RED KEINE NVIDIA Grafikkarte gefunden... Treiber wird NICHT installiert ! $NORMAL "
 elif [ "$NVDETECT" = "test" ]; then
         echo "test"
 else
-        echo "something else"
+        echo "$GREEN ************************************************************"
+        echo "    installiere NVIDIA-Treiber ..."
+        echo " ... $NORMAL"
+        sudo apt install nvidia-driver
+        sudo apt install firmware-misc-nonfree
+        echo "$GREEN ************************************************************"
 fi
-
-
-#---------- WIP ----------
-
-echo "$GREEN ************************************************************"
-echo "    installiere NVIDIA-Treiber ..."
-echo " ... $NORMAL"
-#sudo apt install nvidia-driver
-#sudo apt install firmware-misc-nonfree
-echo "$GREEN ************************************************************"
