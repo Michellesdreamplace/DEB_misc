@@ -43,7 +43,14 @@ echo "$NORMAL "
 #---------- WIP ----------
 #
 if [ "$NVDETECT" = "No NVIDIA GPU detected." ]; then
-        echo "$RED KEINE NVIDIA Grafikkarte gefunden... Treiber wird NICHT installiert ! $NORMAL "
+        echo "$RED "
+        echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+        echo "+++++                                                  +++++"
+        echo "+++++  KEINE NVIDIA Grafikkarte gefunden...            +++++"
+        echo "+++++  Treiber wird NICHT installiert !                +++++"    
+        echo "+++++                                                  +++++"
+        echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+        echo "$NORMAL "
 elif [ "$NVDETECT" = "test" ]; then
         echo "test"
 else
