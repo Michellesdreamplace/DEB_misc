@@ -38,3 +38,10 @@ nvidia-detect
 echo "+++++                                                  +++++"
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo "$NORMAL "
+#
+echo "$GREEN ************************************************************"
+echo "    installiere NVIDIA-Treiber ..."
+echo " ... $NORMAL"
+sudo apt install nvidia-driver
+sudo apt install firmware-misc-nonfree
+echo "$GREEN ************************************************************"
