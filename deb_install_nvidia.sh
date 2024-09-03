@@ -31,17 +31,29 @@ echo " ... $NORMAL"
 sudo apt install nvidia-detect -y
 echo "$GREEN ************************************************************"
 echo "$NORMAL "
+NVDETECT=$(nvidia-detect)
 echo "$CYAN "
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo "+++++                                                  +++++"
-nvidia-detect
+echo "+++++  $NVDETECT "
 echo "+++++                                                  +++++"
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo "$NORMAL "
 #
+aaa="xxx"
+if [[ $NVDETECT -eq "No NVIDIA GPU detected." ]]; then
+   echo "no"
+elif [[ $NVDETECT -eq "test" ]]; then
+   echo "teat"
+else
+   echo "something else"
+fi
+
+#---------- WIP ----------
+
 echo "$GREEN ************************************************************"
 echo "    installiere NVIDIA-Treiber ..."
 echo " ... $NORMAL"
-sudo apt install nvidia-driver
-sudo apt install firmware-misc-nonfree
+#sudo apt install nvidia-driver
+#sudo apt install firmware-misc-nonfree
 echo "$GREEN ************************************************************"
