@@ -6,3 +6,14 @@
 
 
   -------------------------------------------------------------------------------------------
+
+  
+-➤ Lade die Datei "deb_trixie_install_firefox_apt.sh" als RAW-Datei herunter,  
+  
+-➤ Gib der Datei "deb_trixie_install_firefox_apt.sh" die Rechte zum Ausführen,  
+  
+   z.B. im Terminal mit: ```chmod +x ./Downloads/deb_trixie_install_firefox_apt.sh```  
+  
+-➤ Öffne ein Terminal und führe das Skript mit folgendem Befehl aus:  
+  
+```bash ./Downloads/deb_trixie_install_firefox_apt.sh```  
