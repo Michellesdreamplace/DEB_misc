@@ -21,3 +21,22 @@ Schritte zur Erstellung einer .desktop-Datei
        Comment=Startet Thunderbird beim Login
         ```
    - Speichern Sie die Datei und schließen Sie den Editor (bei nano: Strg + O, dann Enter, gefolgt von Strg + X).
+
+----------
+
+  ```bash
+  sudo apt update && sudo apt install wmctrl
+  ```
+
+
+```plaintext
+[Desktop Entry]
+Type=Application
+Exec=sh -c 'thunderbird & sleep 3; wmctrl -x -r "thunderbird.Thunderbird" -b add,hidden'
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Thunderbird
+Comment=Startet Thunderbird beim Login (minimiert)
+```
+
