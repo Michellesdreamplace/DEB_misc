@@ -37,19 +37,17 @@ Schritte zur Erstellung einer .desktop-Datei
 ### Thunderbird unter Debian (xfce / x11) automatisch minimiert zu starten:
 
  - Öffne ein Terminal.
-    - Erstelle die .desktop-Datei:
-        Gib den folgenden Befehl ein, um die Datei zu erstellen:
-
+    - Installiere wmctrl:
       ```bash
       sudo apt update && sudo apt install wmctrl
       ```
 
-
+    - Erstelle die .desktop-Datei:
       ```bash
       nano ~/.config/autostart/thunderbird.desktop
       ```
 
-    - Fügen Sie den folgenden Inhalt in die Datei ein:
+    - Ersetze den Inhalt von ~/.config/autostart/thunderbird.desktop durch folgendes (XFCE auf X11):
     ```plaintext
     [Desktop Entry]
     Type=Application
@@ -71,4 +69,34 @@ Schritte zur Erstellung einer .desktop-Datei
   - Statt add,hidden kannst du add,shaded (gedockt) oder -b remove,hidden zum Wiederherstellen verwenden.
   - Funktioniert unter X11 in XFCE; nicht für Wayland.
 
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
+----------------------
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+### Optional: Alternative mit xdotool (falls wmctrl Probleme macht)
+
+ - Öffne ein Terminal.
+    - Installiere xdotool:
+    ```bash
+    sudo apt update && sudo apt install xdotool
+    ```
+
+- Ersetze den Inhalt von ~/.config/autostart/thunderbird.desktop durch folgendes (XFCE auf X11):
+    ```plaintext
+    [Desktop Entry]
+    Type=Application
+    Exec=sh -c 'thunderbird & sleep 3; wid=$(xdotool search --class Thunderbird | head -n1); [ -n "$wid" ] && xdotool windowminimize $wid'
+    Hidden=false
+    NoDisplay=false
+    X-GNOME-Autostart-enabled=true
+    Name=Thunderbird
+    Comment=Startet Thunderbird beim Login (minimiert)
+    ```      
